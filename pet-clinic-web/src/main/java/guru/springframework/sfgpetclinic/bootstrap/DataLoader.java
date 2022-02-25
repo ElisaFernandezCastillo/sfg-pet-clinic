@@ -62,6 +62,9 @@ public class DataLoader implements CommandLineRunner { //this is one interface f
         owner1.setCity("Miami");
         owner1.setTelephone("1231231234");
 
+        //Using Lombok Builder, we avoid doing all the process of creating an object as done on the LOC above
+        Owner.builder().address("ASDP").build();
+
         Pet mikesPet = new Pet();
         mikesPet.setPetType(savedDogPetType);
         mikesPet.setOwner(owner1);
